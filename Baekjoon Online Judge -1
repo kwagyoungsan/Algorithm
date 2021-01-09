@@ -113,7 +113,47 @@ while True:
 print(count)
 ```
 
+#### 최소, 최대
+- N개의 정수가 주어진다. 이때, 최솟값과 최댓값을 구하는 프로그램을 작성
+```
+a = int(input())
+b = list(map(int, input().split()))
+min = b[0]
+max = b[0]
+  
 
+for i in b:
+  if min > i:
+    min = i
+  elif max < i:
+    max = i
+
+print(min, max)
+```
+
+#### 최댓값
+- 9개의 서로 다른 자연수가 주어질 때, 이들 중 최댓값을 찾고 그 최댓값이 몇 번째 수인지를 구하는 프로그램을 작성
+```
+a = []
+
+for i in range(9):
+  a.append(int(input()))
+
+print(max(a))
+print(a.index(max(a))+1)
+```
+
+#### 숫자의 개수
+- 세 개의 자연수 A, B, C가 주어질 때 A×B×C를 계산한 결과에 0부터 9까지 각각의 숫자가 몇 번씩 쓰였는지를 구하는 프로그램을 작성
+```
+a = int(input())
+b = int(input())
+c = int(input())
+
+num = list(str(a * b * c))
+for i in range(10):
+    print(num.count(str(i)))
+```
 
 
 
