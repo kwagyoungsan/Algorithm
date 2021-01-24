@@ -108,8 +108,31 @@ else :
     print(-1)
 ```
 
+#### 큰 수 A + B
+- 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성
+```
+a, b = map(int, input().split())
+print(a+b)
+```
 
+#### Fly me to the Alpha Centauri
+```
+n = int(input())
 
+for _ in range(n):
+    cnt = 0
+    a, b = map(int, input().split())
+    temp = 1
+    move = 0
+    while(move < b-a):
+        move += temp
+        cnt += 1
+        if cnt % 2 ==0:
+            temp += 1
+    print(cnt)
+      
+```
+ 
 
 
 
