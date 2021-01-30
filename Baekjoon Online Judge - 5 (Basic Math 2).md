@@ -137,5 +137,47 @@ for i in range(num):
 
 ```
 
+#### 직사각형에서 탈출
+```
+import math
+x, y, w, h = map(int, input().split())
 
+a = int(math.fabs(x-w))
+b = int(math.fabs(y-h))
 
+arr = [a, b, x, y]
+
+print(min(arr))
+```
+
+#### 네 번째 점
+- 세 점이 주어졌을 때, 축에 평행한 직사각형을 만들기 위해서 필요한 네 번째 점을 찾는 프로그램을 작성
+```
+x_arr = []
+y_arr = []
+for i in range(3):
+        x, y = map(int, input().split())
+        x_arr.append(x)
+        y_arr.append(y)
+for i in range(3):
+        if x_arr.count(x_arr[i]) == 1:
+                x = x_arr[i]
+        if y_arr.count(y_arr[i]) == 1:
+                y = y_arr[i]
+print(x, y)
+```
+
+#### 직각삼각형
+- 주어진 세변의 길이로 삼각형이 직각인지 아닌지 구분하는 프로그램을 작성
+```
+while True:
+    a = list(map(int, input().split()))
+    max_num = max(a)
+    if sum(a) == 0:
+        break
+    a.remove(max_num)
+    if a[0] ** 2 + a[1] ** 2 == max_num ** 2:
+         print('right')
+    else:
+         print('wrong')
+```
