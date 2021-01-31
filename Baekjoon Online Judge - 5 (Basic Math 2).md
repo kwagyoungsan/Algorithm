@@ -181,3 +181,48 @@ while True:
     else:
          print('wrong')
 ```
+
+#### 택시 기하학
+- 반지름 R이 주어졌을 때, 유클리드 기하학에서 원의 넓이와, 택시 기하학에서 원의 넓이를 구하는 프로그램을 작성
+```
+import math
+
+r = int(input())
+
+print(r*r*math.pi)
+print(2*r*r)
+```
+
+#### 터렛
+- a좌표 (x1, y1)와 좌표 b(x2, y2)가 주어지고, a와 c의 거리 r1과 b와 c의 거리 r2가 주어졌을 때, c가 있을 수 있는 좌표의 수를 출력하는 프로그램을 작성
+```
+import math
+
+n = int(input())
+
+for _ in range(n):
+    ax, ay, r1, bx, by, r2 = map(int, input().split())
+    
+  
+    xsum = abs(ax-bx)
+    ysum = abs(ay-by)
+    dis = math.sqrt(xsum**2 + ysum**2)
+    rsum = r1+r2
+    rminus = abs(r1-r2)
+    
+    if dis == 0:
+        if r1 == r2:
+            print(-1)
+        else:
+            print(0)
+    else:
+        if dis == rsum or dis == rminus:
+            print(1)
+        elif dis < rsum and dis > rminus:
+            print(2)
+        else:
+            print(0)
+```
+
+
+
